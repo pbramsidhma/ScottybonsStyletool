@@ -1,0 +1,217 @@
+﻿@model IEnumerable<ScottybonsStylist.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style type='text/css'>
+    
+    td:nth-child(1){text-align: right;}
+    td:nth-child(2){text-align: right;}
+    td:nth-child(3){text-align: right;}
+    td:nth-child(8){text-align: right;}
+    td:nth-child(14){text-align: right;}
+    td:nth-child(17){text-align: right;}
+    td:nth-child(23){text-align: right;}
+    td:nth-child(27){text-align: right;}
+    td:nth-child(29){text-align: right;}
+</style>
+<h2>Index</h2>
+<h4>Order</h4>
+<p>
+    @Html.ActionLink("Create New", "OrderCreate")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.OccasionComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WishList)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequiredDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgreeGeneralConditions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderHouseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderPostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderTown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliverNeighbours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsStylistContactYou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderCommentStylist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStyleAdvice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfArticles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewOverall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodicalScottyBoxID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NextPerodicalScottyBoxDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentOrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionToCollectFutureInvoices)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderComanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryMaster.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OccasionForScottyBoxMaster.OccasionForScottyBoxName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStatusMaster.OrderStatusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTypeMaster.PaymentTypeName)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "OrderEdit", new { id=item.OrderID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OccasionComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WishList)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequiredDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgreeGeneralConditions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderHouseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderPostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliverNeighbours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsStylistContactYou)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderCommentStylist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderStyleAdvice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfArticles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewOverall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodicalScottyBoxID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NextPerodicalScottyBoxDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentOrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermissionToCollectFutureInvoices)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderComanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryMaster.CountryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OccasionForScottyBoxMaster.OccasionForScottyBoxName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderStatusMaster.OrderStatusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentTypeMaster.PaymentTypeName)
+        </td>
+
+    </tr>
+}
+
+</table>

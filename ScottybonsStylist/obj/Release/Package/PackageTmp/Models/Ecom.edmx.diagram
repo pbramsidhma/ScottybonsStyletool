@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4be48b7c177401291d0225ad7000963" Name="Diagram1">
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.AnswerTypeofControl" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Article" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ArticleColor" Width="1.5" PointX="10.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ArticlePhoto" Width="1.5" PointX="12.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ArticleSKU" Width="1.5" PointX="15.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Brand" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.BudgetMaster" Width="1.5" PointX="7.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.BudgetOptionMaster" Width="1.5" PointX="9.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Category" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ColarTypeMaster" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ColorCategoryMaster" Width="1.5" PointX="10.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ColorPalletMaster" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ColorSubCategoryMaster" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ComfortMaster" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.CountryMaster" Width="1.5" PointX="20.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Customer" Width="1.5" PointX="17.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.CustomerAnswer" Width="1.5" PointX="10.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.CustomerStatusMaster" Width="1.5" PointX="10.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.CustomerTypeForm" Width="1.5" PointX="15.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.EmailContent" Width="1.5" PointX="12.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ErrorLog" Width="1.5" PointX="12.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ExtravaganceMaster" Width="1.5" PointX="8.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.FigureMaster" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.FitMaster" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.FootWidthMaster" Width="1.5" PointX="3" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ForgotPassword" Width="1.5" PointX="20" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GenderMaster" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.HeelHeightMaster" Width="1.5" PointX="12.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.History" Width="1.5" PointX="14.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Language" Width="1.5" PointX="14.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.MaterialMaster" Width="1.5" PointX="3" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.MoodMaster" Width="1.5" PointX="8.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.NewsletterMailList" Width="1.5" PointX="14.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OccasionForScottyBoxMaster" Width="1.5" PointX="20.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderIcePayTransaction" Width="1.5" PointX="16.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItemReviewGeneralMaster" Width="1.5" PointX="17.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItemReviewPriceMaster" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItemReviewSizeMaster" Width="1.5" PointX="10.75" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItemReviewStyleMaster" Width="1.5" PointX="10.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItem" Width="1.5" PointX="13" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderItemStatusMaster" Width="1.5" PointX="10.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Order" Width="1.5" PointX="23" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderShipping" Width="1.5" PointX="20" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderStatusMaster" Width="1.5" PointX="20.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderTransaction" Width="1.5" PointX="20" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PantsLengthMaster" Width="1.5" PointX="3" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PantsModelMaster" Width="1.5" PointX="3" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PantsWaistMaster" Width="1.5" PointX="3" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PasswordLog" Width="1.5" PointX="20" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PaymentTypeMaster" Width="1.5" PointX="20.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PeriodicalScottyBoxMaster" Width="1.5" PointX="12.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SeasonMaster" Width="1.5" PointX="8.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SexynessMaster" Width="1.5" PointX="8.25" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.ShoeMaterialMaster" Width="1.5" PointX="3" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SizeConsistencyMaster" Width="1.5" PointX="22.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SizeMaster" Width="1.5" PointX="8.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SkirtLengthMaster" Width="1.5" PointX="3" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SkirtWidthMaster" Width="1.5" PointX="3" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SKUStatusMaster" Width="1.5" PointX="13.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SleeveLengthMaster" Width="1.5" PointX="3" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.StyleMaster" Width="1.5" PointX="8.25" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.StyleProfileQuestion" Width="1.5" PointX="24.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Stylist" Width="1.5" PointX="10.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.StylistToolTransaction" Width="1.5" PointX="23" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SubCategory" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SubCategoryProperty" Width="1.5" PointX="5.25" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.Supplier" Width="1.5" PointX="3" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SupplierContact" Width="1.5" PointX="25.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.SupplierContactTypeMaster" Width="1.5" PointX="22.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.WaistFitMaster" Width="1.5" PointX="3" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.WearMomentMaster" Width="1.5" PointX="8.25" PointY="34.375" IsExpanded="true" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_GenerMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_SubCategoryProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Article_Suppliery" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_Article" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleSKU_Article" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_ColorpalletMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_ColorSubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_ExtravaganceMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_GendereMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_MoodMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_SeasonMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_SexynessMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_StyleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleColor_WearMomentMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticlePhotos_ArticleColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleSKU_ArticleColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleSKU_Size" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ArticleSKU_StatusSKU" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SizeMaster_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategory_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_ColorTypeMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_ComfortMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Orders_OrderCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_ForgotPassword_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Orders_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderShipping_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderTransactions_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_PasswordLog_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_FigureMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_FitMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_FootWidthMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_MaterialMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Orders_OccasionForScottyBoxMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderItems_OrderItemReviewPriceMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderItems_OrderItemReviewSizeMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderItems_OrderItemReviewStyleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderItems_OrderItemStatusMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_OrderItems_Stylist" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Orders_OrderStatusMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_Orders_PaymentTypeMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_StylistToolTransaction_OrderStatusMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_PantsLengthMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_PantsModelMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_PantsWaistMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_ShoeMaterialMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SizeMaster_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_SkirtLengthMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_SkirtWidthMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_SleeveLengthMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_StylistToolTransaction_Stylist" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ScottybonsECom28062016Model.FK_SubCategoryProperties_WaistFitMaster" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.StyleProfileAnswer" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GiftCard" Width="1.5" PointX="5.375" PointY="8.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.CustomerType" Width="1.5" PointX="5.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GiftCardOrderByType" Width="1.5" PointX="25.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GIftCardsOrder" Width="1.5" PointX="25.375" PointY="15.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GiftCardStatu" Width="1.5" PointX="25.375" PointY="21.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GiftCardRedemption" Width="1.5" PointX="25.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.GiftCardRedemptionStatu" Width="1.5" PointX="22.375" PointY="26.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.OrderPeriodicSubscriptionDetail" Width="1.5" PointX="27.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ScottybonsECom28062016Model.PromoCodeOrder" Width="1.5" PointX="27.375" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

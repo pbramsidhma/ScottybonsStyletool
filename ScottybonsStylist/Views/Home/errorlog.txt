@@ -1,0 +1,44 @@
+﻿
+ IEnumerable<OrderDetailsInfo> orderCustomer = _scottybonsEComEntities.GetCustomerDetailsByOrderID(orderId).ToList(); 
+
+ if ((orderCustomer.Any())) 
+
+ Order Information 
+
+ Order Number 
+
+ Order Date 
+
+ Customer ID 
+
+ First Name 
+
+ Last Name 
+
+ Email 
+
+ Occasion 
+
+ Street Name 
+
+ Street Number 
+
+ Postal Code 
+
+ Town 
+
+ Country 
+
+ Permission to deliver at neighbours? 
+
+ Permission to call? 
+
+ Phonenumber 
+
+ Subscription 
+
+ Period for Subscripion 
+
+ exceptnAn error occurred while executing the command definition. See the inner exception for details. 
+There is already an open DataReader associated with this Command which must be closed first. 
+

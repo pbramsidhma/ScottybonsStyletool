@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{365337AF-193A-4831-951D-B99A0634B682}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScottybonsStylist</RootNamespace>
+    <AssemblyName>Scottybons-Stylist</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConstants\Constants.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GiftCardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Models\CustomerType.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enums\GiftCardsEnums.cs" />
+    <Compile Include="Models\GiftCard.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiftCardOrderByType.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiftCardRedemption.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiftCardRedemptionStatu.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GIftCardsOrder.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiftCardStatu.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiftCards\GiftCardModel.cs" />
+    <Compile Include="Models\GiftCards\GiftCardRedemptionStatusModal.cs" />
+    <Compile Include="Models\OrderPeriodicSubscriptionDetail.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PromoCodeOrder.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Services\AccountServices.cs" />
+    <Compile Include="Models\Services\CommonServices.cs" />
+    <Compile Include="Models\Services\GiftCardServices.cs" />
+    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="WebAPI\CustomerAdminController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnswerTypeofControl.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Article.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArticleColor.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArticlePhoto.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArticleSKU.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BudgetMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BudgetOptionMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColarTypeMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColorCategoryMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColorPalletMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColorSubCategoryMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ComfortMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CountryMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerAnswer.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerStatusMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerTypeForm.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ecom.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ecom.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ecom.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ecom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ecom.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailContent.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ErrorLog.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExtravaganceMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FigureMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FitMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FootWidthMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ForgotPassword.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GenderMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HeelHeightMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\History.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Language.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MaterialMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MoodMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewsletterMailList.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OccasionForScottyBoxMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetailsInfo.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderIcePayTransaction.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItem.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemReviewGeneralMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemReviewPriceMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemReviewSizeMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemReviewStyleMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemStatusMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderListInfo.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderMetadata.cs" />
+    <Compile Include="Models\OrderShipping.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderStatusMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderTransaction.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PantsLengthMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PantsModelMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PantsWaistMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PasswordLog.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PaymentTypeMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PeriodicalScottyBoxMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfileQuestions\ProfileQuestionAnswerViewModel.cs" />
+    <Compile Include="Models\SeasonMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SexynessMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShoeMaterialMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SizeConsistencyMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SizeMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SkirtLengthMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SkirtWidthMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUStatusMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SleeveLengthMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StyleMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StyleProfileAnswer.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StyleProfileQuestion.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stylist.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StylistToolTransaction.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubCategory.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubCategoryProperty.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplier.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SupplierContact.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SupplierContactTypeMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaistFitMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WearMomentMaster.cs">
+      <DependentUpon>Ecom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="WebAPI\GiftCardAdminController.cs" />
+    <Compile Include="WebAPI\OrderAdminController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Services\StyleIntakeService.cs" />
+    <Compile Include="WebAPI\SubscriptionsAdminController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ui-grid.css" />
+    <Content Include="Content\ui-grid.min.css" />
+    <Content Include="Content\ui-grid.svg" />
+    <Content Include="css\ui-grid.css" />
+    <Content Include="css\ui-grid.min.css" />
+    <Content Include="css\ui-grid.svg" />
+    <Content Include="ErrorLog\errorlog.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="JS\GidtCardCtrl.js" />
+    <Content Include="JS\GiftCardRedemptionCtrl.js" />
+    <Content Include="Models\Ecom.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Ecom.edmx</DependentUpon>
+      <LastGenOutput>Ecom.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Ecom.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Ecom.edmx</DependentUpon>
+      <LastGenOutput>Ecom.cs</LastGenOutput>
+    </Content>
+    <Content Include="JS\OrderCtrl.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Content\ui-grid.woff" />
+    <Content Include="Content\ui-grid.ttf" />
+    <Content Include="Content\ui-grid.eot" />
+    <EntityDeploy Include="Models\Ecom.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Ecom.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Ecom.edmx.diagram">
+      <DependentUpon>Ecom.edmx</DependentUpon>
+    </Content>
+    <Content Include="css\ui-grid.eot" />
+    <Content Include="css\ui-grid.ttf" />
+    <Content Include="css\ui-grid.woff" />
+    <Content Include="CodeGen\Order.json" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ScottybonsStylist.pubxml" />
+    <None Include="Properties\PublishProfiles\scottybonsstylisttest.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ui-grid.js" />
+    <Content Include="Scripts\ui-grid.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="src\css\datetimepicker.css" />
+    <Content Include="src\js\datetimepicker.js" />
+    <Content Include="src\js\datetimepicker.templates.js" />
+    <Content Include="src\templates\datetimepicker.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Date.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Date.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Order\OrderIndex.cshtml" />
+    <Content Include="Views\Order\OrderCreate.cshtml" />
+    <Content Include="Views\Order\OrderEdit.cshtml" />
+    <Content Include="Views\Order\OrderEditForm.cshtml" />
+    <Content Include="Views\Home\WithFooter.cshtml" />
+    <Content Include="Views\GiftCard\GiftCard.cshtml" />
+    <Content Include="Views\GiftCard\Redemption.cshtml" />
+    <Content Include="src\css\datetimepicker.css.map" />
+    <Content Include="src\scss\datetimepicker.scss" />
+    <Content Include="src\scss\_core.scss" />
+    <Content Include="src\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12484</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12484/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

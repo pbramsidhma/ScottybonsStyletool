@@ -1,0 +1,212 @@
+﻿@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="~/Scripts/ui-grid.js"></script>
+<link href="~/css/ui-grid.css" rel="stylesheet" />
+
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .grid {
+        width: 100%;
+        height: 100%;
+    }
+    /*
+        * ui-grid Styles: General
+        * -------------------------
+        */
+    .gridTable {
+        background: white;
+        width: auto;
+    }
+
+    .modal-body {
+        width: auto;
+        height: auto;
+    }
+
+    .modal-dialog {
+        left: 0px;
+        width: 1200px;
+    }
+
+    .blue {
+        color: blue;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .spinner {
+        text-align: center;
+        margin-top: 50px;
+        z-index: 1000;
+    }
+
+    .gridTableImages {
+        background: white;
+        width: 100%;
+    }
+
+    div#ImagesGrid {
+        min-height: 350px;
+    }
+
+
+    .ui-grid-viewport .ui-grid-cell-contents {
+        word-wrap: break-word;
+        white-space: normal !important;
+    }
+
+    .ui-grid-row, .ui-grid-cell {
+        /*height: auto !important;*/
+    }
+
+        .ui-grid-row div[role=row] {
+            /*display: flex;*/
+            align-content: stretch;
+        }
+
+    .margin-btm {
+        margin: 10px 0px;
+    }
+
+    .zeropadding {
+        padding: 0px;
+    }
+
+    .hiding {
+        display: none;
+    }
+    .ui-grid-cell:last-Child {
+    text-align: center;
+}
+    .btnSubscription{
+            line-height: 1 !important;
+    }
+</style>
+
+
+
+<div ng-app="app">
+    <div ng-controller="MainCtrl">
+        <h2 style="text-align: center;">Orders</h2>
+        @*<div id="grid1" ui-grid="gridOptions" ui-grid-selection ui-grid-exporter ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-auto-resize ui-grid-grouping></div>*@
+        <div id="grid1" ui-grid="gridOptions" ui-grid-selection ui-grid-exporter ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-auto-resize></div>
+    </div>
+    <script type="text/ng-template" id="ngTemplate/infoPopup.html">
+        <div class="spinner" ng-show="loader.loading"><img src="images/ajax-loader.gif" /></div>
+        <div class="modal-header">
+            @*<h4>Order Details for : <span>{{selectedRow.OrderId}}</span></h4>*@
+            <h4 style="text-align center;">Order Details</h4>
+        </div>
+        <div>
+            <div id="CustomerGrid" ui-grid="gridOptions" class="gridTable" ui-grid-exporter ui-grid-selection ui-grid-resize-columns></div>
+        </div>
+        <div>
+            <div id="ImagesGrid" ui-grid="gridImages" class="gridTableImages" ui-grid-exporter ui-grid-selection ui-grid-resize-columns></div>
+        </div>
+
+
+        <div class="modal-footer">
+            <button class="btn btn-primary btnCustom" ng-click="ok()">OK</button>
+            @*<button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>*@
+        </div>
+    </script>
+
+
+    @*<script type="text/ng-template" id="ngTemplate/subscriptionPopup.html">
+
+        <div class="spinner" ng-show="loader.loading"><img src="images/ajax-loader.gif" /></div>
+        <form name="subscriptionEdit">
+            <div class="modal-header">
+                <h4 style=" text-align center;">Order Subscription Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-btm">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3" ng-repeat="subscription in subscriptions">
+                        <label><input type="radio" ng-checked="{{(subscription.value == selectedRows.PeriodicalScottyBoxID)?'true':'false'}}" name="Subscription-period" value="{{subscription.value}}" ng-model="selectedRows.PeriodicalScottyBoxID" />{{subscription.name}}</label>
+                    </div>
+                </div>
+
+                <div class="row margin-btm">
+                    <div class="col-sm-6 text-right">Manage Subscription</div>
+                    <div class="col-sm-6 text-left">
+                        <label><input type="radio" ng-checked="{{(selectedRows.PerodicalMonths != null)}}" name="Subscription-mode" ng-value="1" ng-model="selectedRows.subscriptionMode" />Enable</label>
+                        <label><input type="radio" ng-checked="{{(selectedRows.PerodicalMonths == null)}}" name="Subscription-mode" ng-value="0" ng-model="selectedRows.subscriptionMode" />Disable</label>
+                    </div>
+                </div>
+                <div class="row margin-btm">
+                    <div class="col-sm-5 text-right">Occasion</div>
+                    <div class="col-sm-7">
+                        <select ng-model="selectedRows.occasionSelected">
+                            <option value="">Choose an occasion</option>
+                            <option ng-selected="{{option.value == selectedRows.OrderOccasion}}" ng-repeat="option in occasions" value="{{option.value}}">{{option.name}}</option>
+                        </select>
+                       
+                    </div>
+                </div>
+                
+                <div class="row margin-btm">
+                    <div class="col-sm-5 text-right">Shipment Address</div>
+                    <div class="col-sm-7">
+                        <div class="col-sm-4 zeropadding">
+                            <input type="text" name="DeliveryAddressStreet" ng-model="selectedRows.OrderStreet" value="{{selectedRows.OrderStreet}}" class="form-group" required />
+                            <span style="color:red" ng-show="subscriptionEdit.DeliveryAddressStreet.$dirty && subscriptionEdit.DeliveryAddressStreet.$invalid">
+                                <span ng-show="subscriptionEdit.DeliveryAddressStreet.$error.required">Street is required.</span>
+                            </span>
+                        </div>
+                        <div class="col-sm-3 zeropadding">
+                            <input type="text" name="DeliveryAddressNumber" ng-model="selectedRows.OrderHouseNumber" value="{{selectedRows.OrderHouseNumber}}" class="form-group" required />
+                            <span style="color:red" ng-show="subscriptionEdit.DeliveryAddressNumber.$dirty && subscriptionEdit.DeliveryAddressNumber.$invalid">
+                                <span ng-show="subscriptionEdit.DeliveryAddressNumber.$error.required">House Number is required.</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-btm">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-7">
+                        <div class="col-sm-4 zeropadding">
+                            <input type="text" name="DeliveryAddressZip" value="{{selectedRows.OrderPostalCode}}" ng-model="selectedRows.OrderPostalCode" class="form-group" required />
+                            <span style="color:red" ng-show="subscriptionEdit.DeliveryAddressZip.$dirty && subscriptionEdit.DeliveryAddressZip.$invalid">
+                                <span ng-show="subscriptionEdit.DeliveryAddressZip.$error.required">Zip is required.</span>
+                            </span>
+                        </div>
+                        <div class="col-sm-3 zeropadding">
+                            <input type="text" name="DeliveryAddressTown" value="{{selectedRows.OrderTown}}" ng-model="selectedRows.OrderTown" class="form-group" required />
+                            <span style="color:red" ng-show="subscriptionEdit.DeliveryAddressTown.$dirty && subscriptionEdit.DeliveryAddressTown.$invalid">
+                                <span ng-show="subscriptionEdit.DeliveryAddressTown.$error.required">Town is required.</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row margin-btm">
+                    <div class="col-sm-5 text-right">Delivery at Neighbour</div>
+                    <div class="col-sm-7">
+                        <label><input type="radio" ng-checked="{{(selectedRows.deliveryAtNeighbour == '1')}}" name="deliveryAtNeighbour" ng-value="1" ng-model="selectedRows.deliveryAtNeighbour" />Yes</label>
+                        <label><input type="radio" ng-checked="{{(selectedRows.deliveryAtNeighbour== '0')}}" name="deliveryAtNeighbour" ng-value="0" ng-model="selectedRows.deliveryAtNeighbour" />No</label>
+                    </div>
+                </div>
+                <div class="row margin-btm">
+                    <div class="col-sm-5 text-right">Contact Number:</div>
+                    <div class="col-sm-7">
+                        <input type="text" name="ContactNumber" value="{{selectedRows.ContactNumber}}" ng-model="selectedRows.ContactNumber" class="form-group" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btnCustom" ng-disabled="valiateDtls()" ng-click="save()">Save</button>
+                <button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>
+            </div>
+        </form>
+    </script>*@
+    <script src="~/JS/OrderCtrl.js"></script>
+</div>

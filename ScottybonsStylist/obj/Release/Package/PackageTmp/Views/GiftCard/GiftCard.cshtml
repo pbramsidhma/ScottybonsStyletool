@@ -1,0 +1,564 @@
+﻿@{
+    ViewBag.Title = "GiftCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">
+
+<script src="~/Scripts/ui-grid.js"></script>
+<link href="~/css/ui-grid.css" rel="stylesheet" />
+
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .grid {
+        width: 100%;
+        height: 100%;
+    }
+    /*
+        * ui-grid Styles: General
+        * -------------------------
+        */
+    .gridTable {
+        background: white;
+        width: auto;
+    }
+
+    .modal-body {
+        width: auto;
+        height: auto;
+    }
+
+    .modal-dialog {
+        left: 0px;
+        width: 60%;
+    }
+
+    .blue {
+        color: blue;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .spinner {
+        text-align: center;
+        margin-top: 50px;
+        z-index: 1000;
+    }
+
+    .gridTableImages {
+        background: white;
+        width: 100%;
+    }
+
+    div#ImagesGrid {
+        min-height: 350px;
+    }
+
+
+    .ui-grid-viewport .ui-grid-cell-contents {
+        word-wrap: break-word;
+        white-space: normal !important;
+    }
+
+    .ui-grid-row, .ui-grid-cell {
+        height: auto !important;
+    }
+
+        .ui-grid-row div[role=row] {
+            display: flex;
+            align-content: stretch;
+        }
+
+    /*=================== gift card css section ===========================*/
+    .gift-card-header {
+        text-align: center;
+        border-bottom: solid thin #aaa;
+    }
+
+    .gc-dummy-filter {
+        height: 1px;
+    }
+
+    button.btn-add-gift-card-admin {
+        float: right;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .gc-modal-info, .gc-modal-info-header {
+        background: #bfd6ca;
+        padding-top: 2%;
+    }
+
+    div.gc-modal-add label, div.gc-modal-info label {
+        font-weight: 500;
+    }
+
+    .gc-order-info-value {
+        background: #fff;
+    }
+
+    input.gc-add-input-field {
+        width: 100%;
+        background: #bfd6ca;
+        height: 28px;
+        border: solid thin #8aa999;
+    }
+
+    .gc-modal-add-row {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    textarea.gc-pers-msg {
+        height: 100px;
+        width: 100%;
+        background: #bfd6ca;
+        border: solid thin #8aa999;
+    }
+
+    select.countries {
+        background: #bfd6ca;
+        height: 28px;
+        width: 100%;
+        border: solid thin #8aa999;
+    }
+
+    label.gc-bold-field {
+        font-weight: bold !important;
+    }
+
+    label.gc-order-info-gccode-value {
+        font-size: 15px !important;
+    }
+
+    input.ng-invalid-email, input.ng-invalid-email:focus {
+        border: solid thin #ea8a8a;
+    }
+
+    .modal-footer {
+        margin-top: 0 !important;
+    }
+
+    input[disabled] {
+        cursor: not-allowed !important;
+    }
+</style>
+
+<div ng-app="app">
+    <div class="gc-grid-content" ng-controller="GiftCardCtrl">
+        <div class="gift-card-header">
+            <h2>Gift Cards <button type="button" class="btn btn-primary btn-add-gift-card-admin" ng-click="NewGiftCard()">New</button></h2>
+        </div>
+        <div class="gc-dummy-filter">
+
+        </div>
+        <div class="gc-grid">
+            <div id="grid1" ui-grid="gridOptions" ui-grid-selection ui-grid-exporter ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-auto-resize></div>
+        </div>
+
+        <script type="text/ng-template" id="ngTemplate/newPopup.html">
+            <form name="addform">
+                <div class="add-new-gc">
+                    <div class="modal-header">
+                        <h4 class="text-center">Add Gift Card</h4>
+                    </div>
+                    <div class="gc-modal-add">
+                    
+                        <div class="row gc-modal-add-row gc-fname-sfname">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Order Number</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-disabled="true" ng-model="modal.OrderNumber" class="gc-add-input-field gc-order-number" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Shipment First Name</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.ShipmentFirstName" class="gc-add-input-field gc-order-info-shipname" ng-required="true" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-email-slname">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Email Address</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="email" name="email" ng-model="modal.Email" class="gc-add-input-field gc-email-address" ng-required="true" />
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label>Shipment Last Name</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.ShipmentLastName" class="gc-add-input-field gc-lname-name" ng-required="true" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-pfname-streetname">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>First Name (Paying Customer)</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.PayersFirstName" class="gc-add-input-field gc-pfname-value" ng-required="true" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Street Name</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.ShipmentStreetName" class="gc-add-input-field gc-street-name" ng-required="true" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-plname-honumber">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Last Name (Paying Customer)</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.PayersLastName" class="gc-add-input-field gc-plname-value" ng-required="true" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>House Number</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.ShipmentHouseNumber" class="gc-add-input-field gc-house-number" ng-required="true" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-ovalue-pcode">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Original Value</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" name="originalvalue" ng-model="modal.GiftCardValue" class="gc-add-input-field gc-original-value" ng-required="true" ng-pattern="/^[0-9]{1,7}(\.[0-9]+)?$/" />
+                                    <span ng-show="addform.originalvalue.$error.pattern">Not a valid number!</span>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" name="zip" ng-model="modal.ShipmentPostalCode" class="gc-add-input-field gc-postal-code" ng-required="true" ng-pattern="/^([0-9]{4}[A-z]{2})$/" />
+                                    <span ng-show="addform.zip.$error.pattern" class="zip-valid-error">
+                                        We need your postal code in order to deliver your order (Example format: 1234AB)
+                                    </span>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-rparty-town">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Receiving Party</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.Name" class="gc-add-input-field gc-receiv-party" ng-required="true" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Town</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" ng-model="modal.ShipmentCity" class="gc-add-input-field gc-town" ng-required="true" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row gc-modal-add-row gc-rparty-country">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Personal Message</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <textarea ng-model="modal.PersonalMessage" class="gc-add-input-field gc-pers-msg"></textarea>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Country</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <select ng-model="modal.ShipmentCountry" ng-options="item.CountryId as item.CountryName for item in modal.country" class="countries"></select>
+                                    <input type="hidden" ng-model="modal.ShipmentCountry" class="gc-add-input-field gc-country" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row gc-modal-add-row gc-expdate-empty">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2">
+                                    <label>Expiration Date</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    @*<input type="date" value="10/17/2012" ng-model="modal.ExpirationDateCtrl" class="gc-add-input-field gc-expddate-value" ng-required="true"  datepicker/>*@                                    
+                                    <input ng-model="modal.ExpirationDateCtrl" type="text" id="datepickerExp" ng-required="true"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary btnCustom" ng-click="Cancel()">Cancel</button>
+                            <button class="btn btn-primary btnCustom btn-gc-save" ng-click="addform.$valid && !addform.zip.$error.pattern && Save()">Save</button>
+                            @*<button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>*@
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </script>
+        <script type="text/ng-template" id="ngTemplate/infoPopup.html">
+
+            <div class="spinner" ng-show="loader.loading">
+                <img src="/images/ajax-loader.gif" />
+            </div>
+            <div class="modal-header gc-modal-info-header">
+                <div class="">
+                    <div class="gc-modal-info-header1">
+                        <h4 class="">Gift Card</h4>
+                    </div>
+                    <div class=""></div>
+                </div>
+
+            </div>
+            <div class="gc-modal-info">
+                <div class="row gc-modal-info-row gc-order-info-gccode">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label class="gc-bold-field">Gift Card Code</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-bold-field gc-order-info-gccode-value">{{GiftCardInfo.GiftCardCode}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-onumber">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Order Number</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-onumber-value">{{GiftCardInfo.OrderNumber}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-dtime">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Date and time created</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-dtime-value">{{GiftCardInfo.CreatedDate}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-email">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Email Address Of Paying Customer</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-email-value">{{GiftCardInfo.Email}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-orgvalue">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Original Value</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-orgvalue-value">{{GiftCardInfo.GiftCardValue}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-currvalue">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Current Value</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-currvalue-value">{{GiftCardInfo.CurrentGiftCardValue}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="row gc-modal-info-row  gc-order-info-recparty">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Receiving Party</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-recparty-value">{{GiftCardInfo.Name}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="row  gc-modal-info-row gc-order-info-permsg">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Personal Message</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-permsg-value">{{GiftCardInfo.PersonalMessage}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="row  gc-modal-info-row gc-order-info-shipname">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Shipment First Name</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-shipname-value">{{GiftCardInfo.ShipmentFirstName}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-shipname">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Shipment Last Name</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-shipname-value">{{GiftCardInfo.ShipmentLastName}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-stname">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Street Name</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-stname-value">{{GiftCardInfo.ShipmentStreetName}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-stnumber">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>House Number</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-stnumber-value">{{GiftCardInfo.ShipmentHouseNumber}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-postcode">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Postal Code</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-postcode-value">{{GiftCardInfo.ShipmentPostalCode}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row gc-modal-info-row  gc-order-info-town">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Town</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-town-value">{{GiftCardInfo.ShipmentCity}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-country">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Country</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-country-value">{{GiftCardInfo.ShipmentCountryName}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="row  gc-modal-info-row gc-order-info-expdate">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <label>Expiration Date</label>
+                        </div>
+                        <div class="col-sm-4 gc-order-info-value">
+                            <label class="gc-order-info-expdate-value">{{GiftCardInfo.ExpirationDate}}</label>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary btnCustom" ng-click="ok()">OK</button>
+                    @*<button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>*@
+                </div>
+            </div>
+        </script>
+        
+        <script src="~/JS/GidtCardCtrl.js"></script>        
+    </div>
+</div>

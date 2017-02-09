@@ -1,0 +1,1383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ScottybonsECom28062016ModelStoreContainer" CdmEntityContainer="ScottybonsECom28062016Entities">
+    <EntitySetMapping Name="AnswerTypeofControls">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.AnswerTypeofControl">
+        <MappingFragment StoreEntitySet="AnswerTypeofControl">
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="GenerID" ColumnName="GenerID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="SubCategoryPropertyID" ColumnName="SubCategoryPropertyID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleDescription" ColumnName="ArticleDescription" />
+          <ScalarProperty Name="SizeConsistencey" ColumnName="SizeConsistencey" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleColors">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ArticleColor">
+        <MappingFragment StoreEntitySet="ArticleColor">
+          <ScalarProperty Name="ArticleColorID" ColumnName="ArticleColorID" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ColorSubCategoryID" ColumnName="ColorSubCategoryID" />
+          <ScalarProperty Name="ColorpalletID" ColumnName="ColorpalletID" />
+          <ScalarProperty Name="WearMomentID" ColumnName="WearMomentID" />
+          <ScalarProperty Name="MoodID" ColumnName="MoodID" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="ExtravaganceID" ColumnName="ExtravaganceID" />
+          <ScalarProperty Name="SexynessID" ColumnName="SexynessID" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+          <ScalarProperty Name="ArticleColorDescription" ColumnName="ArticleColorDescription" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticlePhotos">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ArticlePhoto">
+        <MappingFragment StoreEntitySet="ArticlePhotos">
+          <ScalarProperty Name="ArticlePhotoID" ColumnName="ArticlePhotoID" />
+          <ScalarProperty Name="ArticleColorID" ColumnName="ArticleColorID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleSKUs">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ArticleSKU">
+        <MappingFragment StoreEntitySet="ArticleSKU">
+          <ScalarProperty Name="ArticleSKUID" ColumnName="ArticleSKUID" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleColorID" ColumnName="ArticleColorID" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="Margin" ColumnName="Margin" />
+          <ScalarProperty Name="CurrentRRP" ColumnName="CurrentRRP" />
+          <ScalarProperty Name="OriginalRRP" ColumnName="OriginalRRP" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="NumberReceived" ColumnName="NumberReceived" />
+          <ScalarProperty Name="NumberCustSent" ColumnName="NumberCustSent" />
+          <ScalarProperty Name="NumberCustReturns" ColumnName="NumberCustReturns" />
+          <ScalarProperty Name="NumberReturned" ColumnName="NumberReturned" />
+          <ScalarProperty Name="NumberPaid" ColumnName="NumberPaid" />
+          <ScalarProperty Name="StatusSKUID" ColumnName="StatusSKUID" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.BudgetMaster">
+        <MappingFragment StoreEntitySet="BudgetMaster">
+          <ScalarProperty Name="BudgetID" ColumnName="BudgetID" />
+          <ScalarProperty Name="BudgetName" ColumnName="BudgetName" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetOptionMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.BudgetOptionMaster">
+        <MappingFragment StoreEntitySet="BudgetOptionMaster">
+          <ScalarProperty Name="BudgetOptionID" ColumnName="BudgetOptionID" />
+          <ScalarProperty Name="BudgetOptionName" ColumnName="BudgetOptionName" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColarTypeMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ColarTypeMaster">
+        <MappingFragment StoreEntitySet="ColarTypeMaster">
+          <ScalarProperty Name="ColarTypeID" ColumnName="ColarTypeID" />
+          <ScalarProperty Name="ColarTypeName" ColumnName="ColarTypeName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColorCategoryMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ColorCategoryMaster">
+        <MappingFragment StoreEntitySet="ColorCategoryMaster">
+          <ScalarProperty Name="ColorCategoryID" ColumnName="ColorCategoryID" />
+          <ScalarProperty Name="ColorCategoryName" ColumnName="ColorCategoryName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColorPalletMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ColorPalletMaster">
+        <MappingFragment StoreEntitySet="ColorPalletMaster">
+          <ScalarProperty Name="ColorPalletID" ColumnName="ColorPalletID" />
+          <ScalarProperty Name="ColorPalletName" ColumnName="ColorPalletName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColorSubCategoryMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ColorSubCategoryMaster">
+        <MappingFragment StoreEntitySet="ColorSubCategoryMaster">
+          <ScalarProperty Name="ColorSubCategoryID" ColumnName="ColorSubCategoryID" />
+          <ScalarProperty Name="ColorCategoryID" ColumnName="ColorCategoryID" />
+          <ScalarProperty Name="ColorSubCategoryName" ColumnName="ColorSubCategoryName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComfortMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ComfortMaster">
+        <MappingFragment StoreEntitySet="ComfortMaster">
+          <ScalarProperty Name="ComfortID" ColumnName="ComfortID" />
+          <ScalarProperty Name="ComfortName" ColumnName="ComfortName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.CountryMaster">
+        <MappingFragment StoreEntitySet="CountryMaster">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="TwoLetterISOCode" ColumnName="TwoLetterISOCode" />
+          <ScalarProperty Name="TwoLetterLanguageCode" ColumnName="TwoLetterLanguageCode" />
+          <ScalarProperty Name="ThreeLetterISOCode" ColumnName="ThreeLetterISOCode" />
+          <ScalarProperty Name="NumericISOCode" ColumnName="NumericISOCode" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="ExtensionData" ColumnName="ExtensionData" />
+          <ScalarProperty Name="VATPercentage1" ColumnName="VATPercentage1" />
+          <ScalarProperty Name="VATPercentage2" ColumnName="VATPercentage2" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="CustomerstatusID" ColumnName="CustomerstatusID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PrePosition" ColumnName="PrePosition" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SaltKey" ColumnName="SaltKey" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="AlternativePhoneNumber" ColumnName="AlternativePhoneNumber" />
+          <ScalarProperty Name="LocaleSetting" ColumnName="LocaleSetting" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerAnswers">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.CustomerAnswer">
+        <MappingFragment StoreEntitySet="CustomerAnswers">
+          <ScalarProperty Name="OtherAnswer" ColumnName="OtherAnswer" />
+          <ScalarProperty Name="ANSWERNUMBER" ColumnName="ANSWERNUMBER" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionControlId" ColumnName="QuestionControlId" />
+          <ScalarProperty Name="CustomerImage" ColumnName="CustomerImage" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="QuestionNumber" ColumnName="QuestionNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerStatusMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.CustomerStatusMaster">
+        <MappingFragment StoreEntitySet="CustomerStatusMaster">
+          <ScalarProperty Name="CustomerStatusID" ColumnName="CustomerStatusID" />
+          <ScalarProperty Name="CustomerStatusName" ColumnName="CustomerStatusName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTypeForms">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.CustomerTypeForm">
+        <MappingFragment StoreEntitySet="CustomerTypeForm">
+          <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+          <ScalarProperty Name="CustomerStatus" ColumnName="CustomerStatus" />
+          <ScalarProperty Name="CFirstName" ColumnName="CFirstName" />
+          <ScalarProperty Name="CLastName" ColumnName="CLastName" />
+          <ScalarProperty Name="CEmailAddress" ColumnName="CEmailAddress" />
+          <ScalarProperty Name="ScoreStyleBohemian" ColumnName="ScoreStyleBohemian" />
+          <ScalarProperty Name="ScoreStyle2" ColumnName="ScoreStyle2" />
+          <ScalarProperty Name="ScoreStyle3" ColumnName="ScoreStyle3" />
+          <ScalarProperty Name="ScoreStyle4" ColumnName="ScoreStyle4" />
+          <ScalarProperty Name="ScoreStyle5" ColumnName="ScoreStyle5" />
+          <ScalarProperty Name="ScoreStyle6" ColumnName="ScoreStyle6" />
+          <ScalarProperty Name="ScoreStyle7" ColumnName="ScoreStyle7" />
+          <ScalarProperty Name="ScoreStyle8" ColumnName="ScoreStyle8" />
+          <ScalarProperty Name="ScoreStyle9" ColumnName="ScoreStyle9" />
+          <ScalarProperty Name="ScoreStyle10" ColumnName="ScoreStyle10" />
+          <ScalarProperty Name="ScorePants" ColumnName="ScorePants" />
+          <ScalarProperty Name="CommentScorepants" ColumnName="CommentScorepants" />
+          <ScalarProperty Name="ScoreExperiment" ColumnName="ScoreExperiment" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="CommentSector" ColumnName="CommentSector" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="Transportation" ColumnName="Transportation" />
+          <ScalarProperty Name="DescriptionWorkDresscode" ColumnName="DescriptionWorkDresscode" />
+          <ScalarProperty Name="PerceivedAge" ColumnName="PerceivedAge" />
+          <ScalarProperty Name="CBirthdate" ColumnName="CBirthdate" />
+          <ScalarProperty Name="FreqBusiness" ColumnName="FreqBusiness" />
+          <ScalarProperty Name="OrderOccasion" ColumnName="OrderOccasion" />
+          <ScalarProperty Name="CommentOrderOccasion" ColumnName="CommentOrderOccasion" />
+          <ScalarProperty Name="ColorPreference" ColumnName="ColorPreference" />
+          <ScalarProperty Name="HairColor" ColumnName="HairColor" />
+          <ScalarProperty Name="EyeColor" ColumnName="EyeColor" />
+          <ScalarProperty Name="SkinColor" ColumnName="SkinColor" />
+          <ScalarProperty Name="Photograph" ColumnName="Photograph" />
+          <ScalarProperty Name="ColorAntipathyBlack" ColumnName="ColorAntipathyBlack" />
+          <ScalarProperty Name="ColorAntipathyBrown" ColumnName="ColorAntipathyBrown" />
+          <ScalarProperty Name="ColorAntipathyGreen" ColumnName="ColorAntipathyGreen" />
+          <ScalarProperty Name="ColorAntipathyYellow" ColumnName="ColorAntipathyYellow" />
+          <ScalarProperty Name="ColorAntipathyOrange" ColumnName="ColorAntipathyOrange" />
+          <ScalarProperty Name="ColorAntipathyRed" ColumnName="ColorAntipathyRed" />
+          <ScalarProperty Name="ColorAntipathyWhite" ColumnName="ColorAntipathyWhite" />
+          <ScalarProperty Name="ColorAntipathyPurple" ColumnName="ColorAntipathyPurple" />
+          <ScalarProperty Name="ColorAntipathyPink" ColumnName="ColorAntipathyPink" />
+          <ScalarProperty Name="ColorAntipathyGray" ColumnName="ColorAntipathyGray" />
+          <ScalarProperty Name="ColorAntipathyOther" ColumnName="ColorAntipathyOther" />
+          <ScalarProperty Name="ColorAntipathyNone" ColumnName="ColorAntipathyNone" />
+          <ScalarProperty Name="MaterialAntipathyWool" ColumnName="MaterialAntipathyWool" />
+          <ScalarProperty Name="MaterialAntipathyPolyester" ColumnName="MaterialAntipathyPolyester" />
+          <ScalarProperty Name="MaterialAntipathySilk" ColumnName="MaterialAntipathySilk" />
+          <ScalarProperty Name="MaterialAntipathyViscose" ColumnName="MaterialAntipathyViscose" />
+          <ScalarProperty Name="MaterialAntipathyAcryl" ColumnName="MaterialAntipathyAcryl" />
+          <ScalarProperty Name="MaterialAntipathyNylon" ColumnName="MaterialAntipathyNylon" />
+          <ScalarProperty Name="MaterialAntipathyCotton" ColumnName="MaterialAntipathyCotton" />
+          <ScalarProperty Name="MaterialAntipathyLinnen" ColumnName="MaterialAntipathyLinnen" />
+          <ScalarProperty Name="MaterialAntipathyOther" ColumnName="MaterialAntipathyOther" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="BodyShape" ColumnName="BodyShape" />
+          <ScalarProperty Name="AccentArms" ColumnName="AccentArms" />
+          <ScalarProperty Name="AccentLegs" ColumnName="AccentLegs" />
+          <ScalarProperty Name="AccentBum" ColumnName="AccentBum" />
+          <ScalarProperty Name="AccentWaist" ColumnName="AccentWaist" />
+          <ScalarProperty Name="AccentHoulders" ColumnName="AccentHoulders" />
+          <ScalarProperty Name="AccentDecollet" ColumnName="AccentDecollet" />
+          <ScalarProperty Name="AccentBoosom" ColumnName="AccentBoosom" />
+          <ScalarProperty Name="AccentNone" ColumnName="AccentNone" />
+          <ScalarProperty Name="CamouflageUpperarms" ColumnName="CamouflageUpperarms" />
+          <ScalarProperty Name="CamouflageShoulders" ColumnName="CamouflageShoulders" />
+          <ScalarProperty Name="CamouflageNeck" ColumnName="CamouflageNeck" />
+          <ScalarProperty Name="CamouflageBreasts" ColumnName="CamouflageBreasts" />
+          <ScalarProperty Name="CamouflageDecollete" ColumnName="CamouflageDecollete" />
+          <ScalarProperty Name="CamouflageBelly" ColumnName="CamouflageBelly" />
+          <ScalarProperty Name="CamouflageUpperlegs" ColumnName="CamouflageUpperlegs" />
+          <ScalarProperty Name="CamouflageLowerlegs" ColumnName="CamouflageLowerlegs" />
+          <ScalarProperty Name="CamouflageBum" ColumnName="CamouflageBum" />
+          <ScalarProperty Name="CamouflageAnkles" ColumnName="CamouflageAnkles" />
+          <ScalarProperty Name="SizeTop" ColumnName="SizeTop" />
+          <ScalarProperty Name="CommentSizeTop" ColumnName="CommentSizeTop" />
+          <ScalarProperty Name="SizeCup" ColumnName="SizeCup" />
+          <ScalarProperty Name="CommentSizeCup" ColumnName="CommentSizeCup" />
+          <ScalarProperty Name="FitTop" ColumnName="FitTop" />
+          <ScalarProperty Name="SizePants" ColumnName="SizePants" />
+          <ScalarProperty Name="CommentSizePants" ColumnName="CommentSizePants" />
+          <ScalarProperty Name="FitPants" ColumnName="FitPants" />
+          <ScalarProperty Name="HighWaistJeans" ColumnName="HighWaistJeans" />
+          <ScalarProperty Name="AverageWaistJeans" ColumnName="AverageWaistJeans" />
+          <ScalarProperty Name="LowWaistJeans" ColumnName="LowWaistJeans" />
+          <ScalarProperty Name="SizeShoes" ColumnName="SizeShoes" />
+          <ScalarProperty Name="NoHeel" ColumnName="NoHeel" />
+          <ScalarProperty Name="LowHeel" ColumnName="LowHeel" />
+          <ScalarProperty Name="AverageHeel" ColumnName="AverageHeel" />
+          <ScalarProperty Name="HighHeel" ColumnName="HighHeel" />
+          <ScalarProperty Name="BudgetBottom" ColumnName="BudgetBottom" />
+          <ScalarProperty Name="BudgetPumps" ColumnName="BudgetPumps" />
+          <ScalarProperty Name="BudgetSneakers" ColumnName="BudgetSneakers" />
+          <ScalarProperty Name="BudgetBag" ColumnName="BudgetBag" />
+          <ScalarProperty Name="BudgetOutfit" ColumnName="BudgetOutfit" />
+          <ScalarProperty Name="BudgetMonth" ColumnName="BudgetMonth" />
+          <ScalarProperty Name="ArticleNOTTops" ColumnName="ArticleNOTTops" />
+          <ScalarProperty Name="ArticleNOTPants" ColumnName="ArticleNOTPants" />
+          <ScalarProperty Name="ArticleNOTSkirt" ColumnName="ArticleNOTSkirt" />
+          <ScalarProperty Name="ArticleNOTDresses" ColumnName="ArticleNOTDresses" />
+          <ScalarProperty Name="ArticleNOTBlazers" ColumnName="ArticleNOTBlazers" />
+          <ScalarProperty Name="ArticleNOTAccesories" ColumnName="ArticleNOTAccesories" />
+          <ScalarProperty Name="ArticleNOTShoes" ColumnName="ArticleNOTShoes" />
+          <ScalarProperty Name="ArticleNOTOther" ColumnName="ArticleNOTOther" />
+          <ScalarProperty Name="Wishlist" ColumnName="Wishlist" />
+          <ScalarProperty Name="CStreet" ColumnName="CStreet" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CPostalcode" ColumnName="CPostalcode" />
+          <ScalarProperty Name="CTown" ColumnName="CTown" />
+          <ScalarProperty Name="PermissionToCall" ColumnName="PermissionToCall" />
+          <ScalarProperty Name="CPhoneNumber1" ColumnName="CPhoneNumber1" />
+          <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="NetworkID" ColumnName="NetworkID" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailContents">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.EmailContent">
+        <MappingFragment StoreEntitySet="EmailContent">
+          <ScalarProperty Name="EmailContentID" ColumnName="EmailContentID" />
+          <ScalarProperty Name="EmailContentLang" ColumnName="EmailContentLang" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+          <ScalarProperty Name="EmailTypeDescription" ColumnName="EmailTypeDescription" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="BodyMiddle" ColumnName="BodyMiddle" />
+          <ScalarProperty Name="Closing" ColumnName="Closing" />
+          <ScalarProperty Name="EndNote" ColumnName="EndNote" />
+          <ScalarProperty Name="EmailHTMLFormat" ColumnName="EmailHTMLFormat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErrorLogs">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ErrorLog">
+        <MappingFragment StoreEntitySet="ErrorLog">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtravaganceMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ExtravaganceMaster">
+        <MappingFragment StoreEntitySet="ExtravaganceMaster">
+          <ScalarProperty Name="ExtravaganceID" ColumnName="ExtravaganceID" />
+          <ScalarProperty Name="ExtravaganceName" ColumnName="ExtravaganceName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FigureMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.FigureMaster">
+        <MappingFragment StoreEntitySet="FigureMaster">
+          <ScalarProperty Name="FigureID" ColumnName="FigureID" />
+          <ScalarProperty Name="FigureName" ColumnName="FigureName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FitMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.FitMaster">
+        <MappingFragment StoreEntitySet="FitMaster">
+          <ScalarProperty Name="FitID" ColumnName="FitID" />
+          <ScalarProperty Name="FitName" ColumnName="FitName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FootWidthMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.FootWidthMaster">
+        <MappingFragment StoreEntitySet="FootWidthMaster">
+          <ScalarProperty Name="FootWidthID" ColumnName="FootWidthID" />
+          <ScalarProperty Name="FootWidthName" ColumnName="FootWidthName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForgotPasswords">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ForgotPassword">
+        <MappingFragment StoreEntitySet="ForgotPassword">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ResetGuid" ColumnName="ResetGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GenderMaster">
+        <MappingFragment StoreEntitySet="GenderMaster">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeelHeightMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.HeelHeightMaster">
+        <MappingFragment StoreEntitySet="HeelHeightMaster">
+          <ScalarProperty Name="HeelHeightID" ColumnName="HeelHeightID" />
+          <ScalarProperty Name="HeelHeightName" ColumnName="HeelHeightName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Histories">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.History">
+        <MappingFragment StoreEntitySet="History">
+          <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Language1" ColumnName="Language" />
+          <ScalarProperty Name="LanguageAbbre" ColumnName="LanguageAbbre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.MaterialMaster">
+        <MappingFragment StoreEntitySet="MaterialMaster">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoodMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.MoodMaster">
+        <MappingFragment StoreEntitySet="MoodMaster">
+          <ScalarProperty Name="MoodID" ColumnName="MoodID" />
+          <ScalarProperty Name="MoodName" ColumnName="MoodName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsletterMailLists">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.NewsletterMailList">
+        <MappingFragment StoreEntitySet="NewsletterMailList">
+          <ScalarProperty Name="NewsletterMailListID" ColumnName="NewsletterMailListID" />
+          <ScalarProperty Name="EMailAddress" ColumnName="EMailAddress" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="SubscriptionConfirmed" ColumnName="SubscriptionConfirmed" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="SubscribedOn" ColumnName="SubscribedOn" />
+          <ScalarProperty Name="UnsubscribedOn" ColumnName="UnsubscribedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OccasionForScottyBoxMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OccasionForScottyBoxMaster">
+        <MappingFragment StoreEntitySet="OccasionForScottyBoxMaster">
+          <ScalarProperty Name="OccasionForScottyBoxID" ColumnName="OccasionForScottyBoxID" />
+          <ScalarProperty Name="OccasionForScottyBoxName" ColumnName="OccasionForScottyBoxName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderIcePayTransactions">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderIcePayTransaction">
+        <MappingFragment StoreEntitySet="OrderIcePayTransactions">
+          <ScalarProperty Name="OrderTransactionID" ColumnName="OrderTransactionID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ConsumerName" ColumnName="ConsumerName" />
+          <ScalarProperty Name="ConsumerAccountNumber" ColumnName="ConsumerAccountNumber" />
+          <ScalarProperty Name="ConsumerAddress" ColumnName="ConsumerAddress" />
+          <ScalarProperty Name="ConsumerHouseNumber" ColumnName="ConsumerHouseNumber" />
+          <ScalarProperty Name="ConsumerCity" ColumnName="ConsumerCity" />
+          <ScalarProperty Name="ConsumerCountry" ColumnName="ConsumerCountry" />
+          <ScalarProperty Name="ConsumerEmail" ColumnName="ConsumerEmail" />
+          <ScalarProperty Name="ConsumerPhoneNumber" ColumnName="ConsumerPhoneNumber" />
+          <ScalarProperty Name="ConsumerIPAddress" ColumnName="ConsumerIPAddress" />
+          <ScalarProperty Name="Issuer" ColumnName="Issuer" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="PaymentTime" ColumnName="PaymentTime" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="TestMode" ColumnName="TestMode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItemReviewGeneralMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItemReviewGeneralMaster">
+        <MappingFragment StoreEntitySet="OrderItemReviewGeneralMaster">
+          <ScalarProperty Name="OrderItemReviewGeneralID" ColumnName="OrderItemReviewGeneralID" />
+          <ScalarProperty Name="OrderItemReviewGeneral" ColumnName="OrderItemReviewGeneral" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItemReviewPriceMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItemReviewPriceMaster">
+        <MappingFragment StoreEntitySet="OrderItemReviewPriceMaster">
+          <ScalarProperty Name="OrderItemReviewPriceID" ColumnName="OrderItemReviewPriceID" />
+          <ScalarProperty Name="OrderItemReviewPriceName" ColumnName="OrderItemReviewPriceName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItemReviewSizeMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItemReviewSizeMaster">
+        <MappingFragment StoreEntitySet="OrderItemReviewSizeMaster">
+          <ScalarProperty Name="OrderItemReviewSizeID" ColumnName="OrderItemReviewSizeID" />
+          <ScalarProperty Name="OrderItemReviewSizeName" ColumnName="OrderItemReviewSizeName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItemReviewStyleMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItemReviewStyleMaster">
+        <MappingFragment StoreEntitySet="OrderItemReviewStyleMaster">
+          <ScalarProperty Name="OrderItemReviewStyleID" ColumnName="OrderItemReviewStyleID" />
+          <ScalarProperty Name="OrderItemReviewStyleName" ColumnName="OrderItemReviewStyleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItem">
+        <MappingFragment StoreEntitySet="OrderItems">
+          <ScalarProperty Name="OrderItemID" ColumnName="OrderItemID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="SKUID" ColumnName="SKUID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Fulfilled" ColumnName="Fulfilled" />
+          <ScalarProperty Name="OrderItemStatusID" ColumnName="OrderItemStatusID" />
+          <ScalarProperty Name="SalesTax" ColumnName="SalesTax" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="VAT1" ColumnName="VAT1" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="StylistID" ColumnName="StylistID" />
+          <ScalarProperty Name="OrderCommentStylist" ColumnName="OrderCommentStylist" />
+          <ScalarProperty Name="OrderStyleAdvice" ColumnName="OrderStyleAdvice" />
+          <ScalarProperty Name="NumberOfArticles" ColumnName="NumberOfArticles" />
+          <ScalarProperty Name="ReviewOverallInformation" ColumnName="ReviewOverallInformation" />
+          <ScalarProperty Name="OrderItemReviewStyleID" ColumnName="OrderItemReviewStyleID" />
+          <ScalarProperty Name="OrderItemReviewSizeID" ColumnName="OrderItemReviewSizeID" />
+          <ScalarProperty Name="OrderItemReviewPriceID" ColumnName="OrderItemReviewPriceID" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItemStatusMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderItemStatusMaster">
+        <MappingFragment StoreEntitySet="OrderItemStatusMaster">
+          <ScalarProperty Name="OrderItemStatusID" ColumnName="OrderItemStatusID" />
+          <ScalarProperty Name="OrderItemStatusName" ColumnName="OrderItemStatusName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="PromoCodeOrderId" ColumnName="PromoCodeOrderId" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderOccasion" ColumnName="OrderOccasion" />
+          <ScalarProperty Name="OccasionComments" ColumnName="OccasionComments" />
+          <ScalarProperty Name="WishList" ColumnName="WishList" />
+          <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="PaymentMethodID" ColumnName="PaymentMethodID" />
+          <ScalarProperty Name="AgreeGeneralConditions" ColumnName="AgreeGeneralConditions" />
+          <ScalarProperty Name="OrderStreet" ColumnName="OrderStreet" />
+          <ScalarProperty Name="OrderHouseNumber" ColumnName="OrderHouseNumber" />
+          <ScalarProperty Name="OrderPostalCode" ColumnName="OrderPostalCode" />
+          <ScalarProperty Name="OrderTown" ColumnName="OrderTown" />
+          <ScalarProperty Name="OrderCountryID" ColumnName="OrderCountryID" />
+          <ScalarProperty Name="OrderComments" ColumnName="OrderComments" />
+          <ScalarProperty Name="DeliverNeighbours" ColumnName="DeliverNeighbours" />
+          <ScalarProperty Name="OrderStatusID" ColumnName="OrderStatusID" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="IsStylistContactYou" ColumnName="IsStylistContactYou" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="OrderCommentStylist" ColumnName="OrderCommentStylist" />
+          <ScalarProperty Name="OrderStyleAdvice" ColumnName="OrderStyleAdvice" />
+          <ScalarProperty Name="NumberOfArticles" ColumnName="NumberOfArticles" />
+          <ScalarProperty Name="ReviewOverall" ColumnName="ReviewOverall" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="PeriodicalScottyBoxID" ColumnName="PeriodicalScottyBoxID" />
+          <ScalarProperty Name="NextPerodicalScottyBoxDate" ColumnName="NextPerodicalScottyBoxDate" />
+          <ScalarProperty Name="ParentOrderID" ColumnName="ParentOrderID" />
+          <ScalarProperty Name="PermissionToCollectFutureInvoices" ColumnName="PermissionToCollectFutureInvoices" />
+          <ScalarProperty Name="OrderComanyName" ColumnName="OrderComanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderShippings">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderShipping">
+        <MappingFragment StoreEntitySet="OrderShipping">
+          <ScalarProperty Name="OrderShippingID" ColumnName="OrderShippingID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+          <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="Octroi" ColumnName="Octroi" />
+          <ScalarProperty Name="ShippingNotes" ColumnName="ShippingNotes" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatusMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderStatusMaster">
+        <MappingFragment StoreEntitySet="OrderStatusMaster">
+          <ScalarProperty Name="OrderStatusID" ColumnName="OrderStatusID" />
+          <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderTransactions">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderTransaction">
+        <MappingFragment StoreEntitySet="OrderTransactions">
+          <ScalarProperty Name="OrderTransactionID" ColumnName="OrderTransactionID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="TransactStatus" ColumnName="TransactStatus" />
+          <ScalarProperty Name="ErrLoc" ColumnName="ErrLoc" />
+          <ScalarProperty Name="ErrMsg" ColumnName="ErrMsg" />
+          <ScalarProperty Name="Fulfilled" ColumnName="Fulfilled" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PantsLengthMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PantsLengthMaster">
+        <MappingFragment StoreEntitySet="PantsLengthMaster">
+          <ScalarProperty Name="PantsLengthID" ColumnName="PantsLengthID" />
+          <ScalarProperty Name="PantsLengthName" ColumnName="PantsLengthName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PantsModelMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PantsModelMaster">
+        <MappingFragment StoreEntitySet="PantsModelMaster">
+          <ScalarProperty Name="PantsModelID" ColumnName="PantsModelID" />
+          <ScalarProperty Name="PantsModelName" ColumnName="PantsModelName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PantsWaistMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PantsWaistMaster">
+        <MappingFragment StoreEntitySet="PantsWaistMaster">
+          <ScalarProperty Name="PantsWaistID" ColumnName="PantsWaistID" />
+          <ScalarProperty Name="PantsWaistName" ColumnName="PantsWaistName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasswordLogs">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PasswordLog">
+        <MappingFragment StoreEntitySet="PasswordLog">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="OldPassword" ColumnName="OldPassword" />
+          <ScalarProperty Name="SaltKey" ColumnName="SaltKey" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTypeMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PaymentTypeMaster">
+        <MappingFragment StoreEntitySet="PaymentTypeMaster">
+          <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+          <ScalarProperty Name="PaymentTypeName" ColumnName="PaymentTypeName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeriodicalScottyBoxMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PeriodicalScottyBoxMaster">
+        <MappingFragment StoreEntitySet="PeriodicalScottyBoxMaster">
+          <ScalarProperty Name="PeriodicalScottyBoxID" ColumnName="PeriodicalScottyBoxID" />
+          <ScalarProperty Name="PeriodicalScottyBox" ColumnName="PeriodicalScottyBox" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="PerodicalMonths" ColumnName="PerodicalMonths" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeasonMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SeasonMaster">
+        <MappingFragment StoreEntitySet="SeasonMaster">
+          <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+          <ScalarProperty Name="SeasonName" ColumnName="SeasonName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SexynessMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SexynessMaster">
+        <MappingFragment StoreEntitySet="SexynessMaster">
+          <ScalarProperty Name="SexynessID" ColumnName="SexynessID" />
+          <ScalarProperty Name="SexynessName" ColumnName="SexynessName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoeMaterialMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.ShoeMaterialMaster">
+        <MappingFragment StoreEntitySet="ShoeMaterialMaster">
+          <ScalarProperty Name="ShoeMaterialID" ColumnName="ShoeMaterialID" />
+          <ScalarProperty Name="ShoeMaterialName" ColumnName="ShoeMaterialName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SizeConsistencyMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SizeConsistencyMaster">
+        <MappingFragment StoreEntitySet="SizeConsistencyMaster">
+          <ScalarProperty Name="SizeConsistencyID" ColumnName="SizeConsistencyID" />
+          <ScalarProperty Name="SizeConsistencyName" ColumnName="SizeConsistencyName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SizeMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SizeMaster">
+        <MappingFragment StoreEntitySet="SizeMaster">
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="AdditionalSize" ColumnName="AdditionalSize" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkirtLengthMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SkirtLengthMaster">
+        <MappingFragment StoreEntitySet="SkirtLengthMaster">
+          <ScalarProperty Name="SkirtLengthID" ColumnName="SkirtLengthID" />
+          <ScalarProperty Name="SkirtLengthName" ColumnName="SkirtLengthName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkirtWidthMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SkirtWidthMaster">
+        <MappingFragment StoreEntitySet="SkirtWidthMaster">
+          <ScalarProperty Name="SkirtWidthID" ColumnName="SkirtWidthID" />
+          <ScalarProperty Name="SkirtWidthName" ColumnName="SkirtWidthName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKUStatusMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SKUStatusMaster">
+        <MappingFragment StoreEntitySet="SKUStatusMaster">
+          <ScalarProperty Name="SKUStatusID" ColumnName="SKUStatusID" />
+          <ScalarProperty Name="SKUStatusName" ColumnName="SKUStatusName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SleeveLengthMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SleeveLengthMaster">
+        <MappingFragment StoreEntitySet="SleeveLengthMaster">
+          <ScalarProperty Name="SleeveLengthID" ColumnName="SleeveLengthID" />
+          <ScalarProperty Name="SleeveLengthName" ColumnName="SleeveLengthName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StyleMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.StyleMaster">
+        <MappingFragment StoreEntitySet="StyleMaster">
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="StyleName" ColumnName="StyleName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StyleProfileQuestions">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.StyleProfileQuestion">
+        <MappingFragment StoreEntitySet="StyleProfileQuestions">
+          <ScalarProperty Name="AdminDescription" ColumnName="AdminDescription" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="AnswerControlID" ColumnName="AnswerControlID" />
+          <ScalarProperty Name="QuestionDescription" ColumnName="QuestionDescription" />
+          <ScalarProperty Name="isRequired" ColumnName="isRequired" />
+          <ScalarProperty Name="ValidationMessage" ColumnName="ValidationMessage" />
+          <ScalarProperty Name="IsImageTobeShown" ColumnName="IsImageTobeShown" />
+          <ScalarProperty Name="isDependent" ColumnName="isDependent" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="QuestionNumber" ColumnName="QuestionNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stylists">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Stylist">
+        <MappingFragment StoreEntitySet="Stylist">
+          <ScalarProperty Name="StylistID" ColumnName="StylistID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PrePosition" ColumnName="PrePosition" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StylistToolTransactions">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.StylistToolTransaction">
+        <MappingFragment StoreEntitySet="StylistToolTransaction">
+          <ScalarProperty Name="StylistToolTransactionID" ColumnName="StylistToolTransactionID" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleRecordID" ColumnName="ModuleRecordID" />
+          <ScalarProperty Name="TransactionMode" ColumnName="TransactionMode" />
+          <ScalarProperty Name="StylistID" ColumnName="StylistID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderStatusID" ColumnName="OrderStatusID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategories">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SubCategory">
+        <MappingFragment StoreEntitySet="SubCategory">
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoryProperties">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SubCategoryProperty">
+        <MappingFragment StoreEntitySet="SubCategoryProperties">
+          <ScalarProperty Name="SubCategoryPropertyID" ColumnName="SubCategoryPropertyID" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="FitID" ColumnName="FitID" />
+          <ScalarProperty Name="ComfortID" ColumnName="ComfortID" />
+          <ScalarProperty Name="FigureID" ColumnName="FigureID" />
+          <ScalarProperty Name="PantsWaistID" ColumnName="PantsWaistID" />
+          <ScalarProperty Name="PantsModelID" ColumnName="PantsModelID" />
+          <ScalarProperty Name="PantsLengthID" ColumnName="PantsLengthID" />
+          <ScalarProperty Name="SkirtWidthID" ColumnName="SkirtWidthID" />
+          <ScalarProperty Name="SkirtLengthID" ColumnName="SkirtLengthID" />
+          <ScalarProperty Name="SleeveLengthID" ColumnName="SleeveLengthID" />
+          <ScalarProperty Name="WaistFitID" ColumnName="WaistFitID" />
+          <ScalarProperty Name="ColarTypeID" ColumnName="ColarTypeID" />
+          <ScalarProperty Name="FootWidthID" ColumnName="FootWidthID" />
+          <ScalarProperty Name="ShoeMaterialID" ColumnName="ShoeMaterialID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="PortalURL" ColumnName="PortalURL" />
+          <ScalarProperty Name="PortalUserName" ColumnName="PortalUserName" />
+          <ScalarProperty Name="PortalPassword" ColumnName="PortalPassword" />
+          <ScalarProperty Name="RecordNames" ColumnName="RecordNames" />
+          <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+          <ScalarProperty Name="MarkUp" ColumnName="MarkUp" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="ReturnRight" ColumnName="ReturnRight" />
+          <ScalarProperty Name="CostPerOrder" ColumnName="CostPerOrder" />
+          <ScalarProperty Name="CostPerReturn" ColumnName="CostPerReturn" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ScottybonsCustomerID" ColumnName="ScottybonsCustomerID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierContacts">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SupplierContact">
+        <MappingFragment StoreEntitySet="SupplierContact">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierContactTypeID" ColumnName="SupplierContactTypeID" />
+          <ScalarProperty Name="SupplierContactTypeName" ColumnName="SupplierContactTypeName" />
+          <ScalarProperty Name="CPEmailAddress" ColumnName="CPEmailAddress" />
+          <ScalarProperty Name="CPFirstName" ColumnName="CPFirstName" />
+          <ScalarProperty Name="CPLastName" ColumnName="CPLastName" />
+          <ScalarProperty Name="CPPreposition" ColumnName="CPPreposition" />
+          <ScalarProperty Name="CPFunction" ColumnName="CPFunction" />
+          <ScalarProperty Name="CPStreet" ColumnName="CPStreet" />
+          <ScalarProperty Name="CPHouseNumber" ColumnName="CPHouseNumber" />
+          <ScalarProperty Name="CPPostalCode" ColumnName="CPPostalCode" />
+          <ScalarProperty Name="CPTown" ColumnName="CPTown" />
+          <ScalarProperty Name="CPCountry" ColumnName="CPCountry" />
+          <ScalarProperty Name="CPLanguage" ColumnName="CPLanguage" />
+          <ScalarProperty Name="CPPhoneNumber1" ColumnName="CPPhoneNumber1" />
+          <ScalarProperty Name="CPPhoneNumber2" ColumnName="CPPhoneNumber2" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierContactTypeMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.SupplierContactTypeMaster">
+        <MappingFragment StoreEntitySet="SupplierContactTypeMaster">
+          <ScalarProperty Name="SupplierContactTypeID" ColumnName="SupplierContactTypeID" />
+          <ScalarProperty Name="SupplierContactTypeName" ColumnName="SupplierContactTypeName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaistFitMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.WaistFitMaster">
+        <MappingFragment StoreEntitySet="WaistFitMaster">
+          <ScalarProperty Name="WaistFitID" ColumnName="WaistFitID" />
+          <ScalarProperty Name="WaistFitName" ColumnName="WaistFitName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WearMomentMasters">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.WearMomentMaster">
+        <MappingFragment StoreEntitySet="WearMomentMaster">
+          <ScalarProperty Name="WearMomentID" ColumnName="WearMomentID" />
+          <ScalarProperty Name="WearMomentName" ColumnName="WearMomentName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_PerodicalScottyBox" FunctionName="ScottybonsECom28062016Model.Store.sp_PerodicalScottyBox" />
+    <FunctionImportMapping FunctionImportName="GetOrders" FunctionName="ScottybonsECom28062016Model.Store.GetOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ScottybonsECom28062016Model.OrderListInfo">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OrderOccasion" ColumnName="OrderOccasion" />
+          <ScalarProperty Name="OccasionForScottyBoxName" ColumnName="OccasionForScottyBoxName" />
+          <ScalarProperty Name="OrderStreet" ColumnName="OrderStreet" />
+          <ScalarProperty Name="OrderHouseNumber" ColumnName="OrderHouseNumber" />
+          <ScalarProperty Name="OrderPostalCode" ColumnName="OrderPostalCode" />
+          <ScalarProperty Name="OrderTown" ColumnName="OrderTown" />
+          <ScalarProperty Name="OrderCountryID" ColumnName="OrderCountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CollectFutureInvoices" ColumnName="CollectFutureInvoices" />
+          <ScalarProperty Name="PermissionToCollectFutureInvoices" ColumnName="PermissionToCollectFutureInvoices" />
+          <ScalarProperty Name="DeliverNeighbours" ColumnName="DeliverNeighbours" />
+          <ScalarProperty Name="PermissionToDeliverAtNeighbours" ColumnName="PermissionToDeliverAtNeighbours" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="IsStylistContactYou" ColumnName="IsStylistContactYou" />
+          <ScalarProperty Name="PermissionToCall" ColumnName="PermissionToCall" />
+          <ScalarProperty Name="NextPerodicalScottyBoxDate" ColumnName="NextPerodicalScottyBoxDate" />
+          <ScalarProperty Name="PeriodicalScottyBoxID" ColumnName="PeriodicalScottyBoxID" />
+          <ScalarProperty Name="PeriodicalScottyBox" ColumnName="PeriodicalScottyBox" />
+          <ScalarProperty Name="PerodicalMonths" ColumnName="PerodicalMonths" />
+          <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomerDetailsByOrderID" FunctionName="ScottybonsECom28062016Model.Store.GetCustomerDetailsByOrderID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ScottybonsECom28062016Model.OrderDetailsInfo">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OrderOccasion" ColumnName="OrderOccasion" />
+          <ScalarProperty Name="OccasionForScottyBoxName" ColumnName="OccasionForScottyBoxName" />
+          <ScalarProperty Name="OrderStreet" ColumnName="OrderStreet" />
+          <ScalarProperty Name="OrderHouseNumber" ColumnName="OrderHouseNumber" />
+          <ScalarProperty Name="OrderPostalCode" ColumnName="OrderPostalCode" />
+          <ScalarProperty Name="OrderTown" ColumnName="OrderTown" />
+          <ScalarProperty Name="OrderCountryID" ColumnName="OrderCountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CollectFutureInvoices" ColumnName="CollectFutureInvoices" />
+          <ScalarProperty Name="PermissionToCollectFutureInvoices" ColumnName="PermissionToCollectFutureInvoices" />
+          <ScalarProperty Name="DeliverNeighbours" ColumnName="DeliverNeighbours" />
+          <ScalarProperty Name="PermissionToDeliverAtNeighbours" ColumnName="PermissionToDeliverAtNeighbours" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="IsStylistContactYou" ColumnName="IsStylistContactYou" />
+          <ScalarProperty Name="PermissionToCall" ColumnName="PermissionToCall" />
+          <ScalarProperty Name="NextPerodicalScottyBoxDate" ColumnName="NextPerodicalScottyBoxDate" />
+          <ScalarProperty Name="PeriodicalScottyBoxID" ColumnName="PeriodicalScottyBoxID" />
+          <ScalarProperty Name="PeriodicalScottyBox" ColumnName="PeriodicalScottyBox" />
+          <ScalarProperty Name="PerodicalMonths" ColumnName="PerodicalMonths" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="StyleProfileAnswers">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.StyleProfileAnswer">
+        <MappingFragment StoreEntitySet="StyleProfileAnswer">
+          <ScalarProperty Name="AnswerNumber" ColumnName="AnswerNumber" />
+          <ScalarProperty Name="QuestionNumber" ColumnName="QuestionNumber" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="AnswerImagePath" ColumnName="AnswerImagePath" />
+          <ScalarProperty Name="AnswerDescription" ColumnName="AnswerDescription" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="DependentQuestion" ColumnName="DependentQuestion" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="AnswerID" ColumnName="AnswerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCards">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GiftCard">
+        <MappingFragment StoreEntitySet="GiftCards">
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="PersonalMessage" ColumnName="PersonalMessage" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CurrentGiftCardValue" ColumnName="CurrentGiftCardValue" />
+          <ScalarProperty Name="GiftCardValue" ColumnName="GiftCardValue" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="GiftCardCode" ColumnName="GiftCardCode" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTypes">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.CustomerType">
+        <MappingFragment StoreEntitySet="CustomerType">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CustomerTypeId" ColumnName="CustomerTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCardOrderByTypes">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GiftCardOrderByType">
+        <MappingFragment StoreEntitySet="GiftCardOrderByType">
+          <ScalarProperty Name="GiftCardOrderByType1" ColumnName="GiftCardOrderByType" />
+          <ScalarProperty Name="GiftCardOrderById" ColumnName="GiftCardOrderById" />
+          <ScalarProperty Name="GiftCardOrderByTypeId" ColumnName="GiftCardOrderByTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIftCardsOrders">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GIftCardsOrder">
+        <MappingFragment StoreEntitySet="GIftCardsOrder">
+          <ScalarProperty Name="RandomOrderSuffixer" ColumnName="RandomOrderSuffixer" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+          <ScalarProperty Name="IssuerType" ColumnName="IssuerType" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="ShipmentLastName" ColumnName="ShipmentLastName" />
+          <ScalarProperty Name="ShipmentFirstName" ColumnName="ShipmentFirstName" />
+          <ScalarProperty Name="PayerLastName" ColumnName="PayerLastName" />
+          <ScalarProperty Name="PayerFirstName" ColumnName="PayerFirstName" />
+          <ScalarProperty Name="OrderTotal" ColumnName="OrderTotal" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="GiftCardOrderId" ColumnName="GiftCardOrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCardStatus">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GiftCardStatu">
+        <MappingFragment StoreEntitySet="GiftCardStatus">
+          <ScalarProperty Name="GiftCardOrderStatus" ColumnName="GiftCardOrderStatus" />
+          <ScalarProperty Name="GiftCardOrderStatusId" ColumnName="GiftCardOrderStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCardRedemptions">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GiftCardRedemption">
+        <MappingFragment StoreEntitySet="GiftCardRedemption">
+          <ScalarProperty Name="StatusText" ColumnName="StatusText" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RedemptionDateTime" ColumnName="RedemptionDateTime" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="AmounOfRedemption" ColumnName="AmounOfRedemption" />
+          <ScalarProperty Name="GiftCardCode" ColumnName="GiftCardCode" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="GiftCardRedemptionId" ColumnName="GiftCardRedemptionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCardRedemptionStatus">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.GiftCardRedemptionStatu">
+        <MappingFragment StoreEntitySet="GiftCardRedemptionStatus">
+          <ScalarProperty Name="GiftCardRedemptionStatus" ColumnName="GiftCardRedemptionStatus" />
+          <ScalarProperty Name="GiftCardRedemptionStatusId" ColumnName="GiftCardRedemptionStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderPeriodicSubscriptionDetails">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.OrderPeriodicSubscriptionDetail">
+        <MappingFragment StoreEntitySet="OrderPeriodicSubscriptionDetail">
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="ChangedByAdmin" ColumnName="ChangedByAdmin" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NewPeriodicalScottyBoxID" ColumnName="NewPeriodicalScottyBoxID" />
+          <ScalarProperty Name="PeriodicalScottyBoxID" ColumnName="PeriodicalScottyBoxID" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderPeriodicSubscriptionID" ColumnName="OrderPeriodicSubscriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PromoCodeOrders">
+      <EntityTypeMapping TypeName="ScottybonsECom28062016Model.PromoCodeOrder">
+        <MappingFragment StoreEntitySet="PromoCodeOrder">
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsPercentage" ColumnName="IsPercentage" />
+          <ScalarProperty Name="PromoCodeValue" ColumnName="PromoCodeValue" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="PromoCodeOrderId" ColumnName="PromoCodeOrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
